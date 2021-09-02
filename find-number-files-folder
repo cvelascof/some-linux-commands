@@ -1,0 +1,5 @@
+#!/bin/bash
+# Find the number of files in a Linux folder
+ls path | wc -l
+# in AWS
+aws s3 ls s3://bucket_name/path/ | wc -l
