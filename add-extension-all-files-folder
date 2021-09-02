@@ -1,0 +1,6 @@
+# this will find files without extension and add your .jpg
+# extracted from here
+# https://stackoverflow.com/a/1108608
+
+
+find /path -type f -not -name "*.*" -exec mv "{}" "{}".jpg \;
