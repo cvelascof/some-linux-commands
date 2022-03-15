@@ -1,0 +1,10 @@
+#!/bin/bash
+# this will rsync files from server A, to server C using server B as a hop
+# useful when server A can connect with server B but not directly with server C
+# but server B can connect directly with server C
+# original idea extracted from here
+# https://serverfault.com/a/889236
+# and modified using
+# https://stackoverflow.com/a/21221449
+
+rsync -v -e 'ssh -A -T user@server_B ssh -A -T user@server_C' local_path_in_server_A :/remote_path_in_server_C
